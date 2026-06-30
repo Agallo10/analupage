@@ -1,0 +1,24 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'Analú | Oficial', description = 'Sitio oficial de Analú — The Queen of the Island from the Pacific to the World' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
